@@ -1,5 +1,9 @@
 pipeline {
   agent any
+  environment {
+    PATH = 'C:\\WINDOWS\\SYSTEM32'
+    PATH = 'C:\\Users\\nusxk41\\AppData\\Local\\Programs\\Git\\bin\\git.exe'
+  }
   stages {
     stage('stage1') {
       steps {
@@ -7,10 +11,5 @@ pipeline {
         bat(script: 'bat \'echo %PATH%\'', returnStatus: true, returnStdout: true)
       }
     }
-
-  }
-  environment {
-    PATH = 'C:\\WINDOWS\\SYSTEM32'
-    PATH = 'C:\\Users\\nusxk41\\AppData\\Local\\Programs\\Git\\bin\\git.exe'
   }
 }
