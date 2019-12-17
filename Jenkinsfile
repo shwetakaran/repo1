@@ -3,8 +3,12 @@ pipeline {
   stages {
     stage('InitP') {
       steps {
-        echo 'I am in Init'
+        echo 'I am in InitP - Step1'
       }
+      steps {
+        echo 'I am in InitP - Step2'
+        sh 'git status'
+      } 
     }
 
   }
