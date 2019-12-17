@@ -4,10 +4,10 @@ pipeline {
     stage('InitP') {
       steps {
         echo 'I am in InitP - Step2'
-        sh 'git fetch --all'
-        sh 'git checkout master'
-        sh 'git checkout dev1'
-        sh 'git merge master'
+        bat 'git fetch --all'
+        bat 'git checkout master'
+        bat 'git checkout dev1'
+        bat 'git merge master'
       } 
     }
   }
