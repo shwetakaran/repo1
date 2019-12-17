@@ -1,15 +1,14 @@
 pipeline {
   agent any
-  environment {
-    PATH = 'C:\\WINDOWS\\SYSTEM32'
-    PATH = 'C:\\Users\\nusxk41\\AppData\\Local\\Programs\\Git\\bin\\git.exe'
-  }
   stages {
-    stage('stage1') {
+    stage('InitP') {
       steps {
-        echo 'stage 1 init'
-        bat(script: 'bat \'echo %PATH%\'', returnStatus: true, returnStdout: true)
-      }
+        echo 'I am in InitP - Step2'
+        bat 'git fetch --all'
+        bat 'git checkout master'
+        bat 'git checkout dev1'
+        bat 'git merge master'
+      } 
     }
   }
 }
