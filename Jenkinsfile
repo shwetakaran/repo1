@@ -10,6 +10,7 @@ pipeline {
 
   }
   environment {
-    PATH = '"C:\\Users\\nusxk41\\AppData\\Local\\Programs\\Git\\bin\\git.exe"'
+    PATH = 'C:\\WINDOWS\\SYSTEM32'
+    PATH = 'C:\\Users\\nusxk41\\AppData\\Local\\Programs\\Git\\bin\\git.exe'
   }
 }
