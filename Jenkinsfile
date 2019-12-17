@@ -5,8 +5,7 @@ pipeline {
   stages {
     stage('mergedev1toqa1') {
       steps {
-      
-        echo "PATH is:" $PATH
+         sh 'echo "PATH is:" $PATH'
         }
 
       }
